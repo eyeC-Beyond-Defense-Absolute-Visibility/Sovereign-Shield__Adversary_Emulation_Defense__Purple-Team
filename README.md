@@ -40,6 +40,7 @@ Goal: Install the orchestration tool on your control machine (Kali) --- Objectif
 Note: Ansible will allow us to automate the configuration of our future nodes.
 Note : Ansible nous permettra d'automatiser la configuration de nos futurs nœuds.
 
+<img width="1177" height="1017" alt="Capture d’écran 2026-02-02 175258" src="https://github.com/user-attachments/assets/d48f9974-fa1a-4da1-b003-dd134c7e29dd" />
 
 
 🏗️ 2. VM Provisioning --- Création des Machines Virtuelles
@@ -81,6 +82,7 @@ Conclusion: Visual Verification --- Vérification visuelle
 	---
 	Résultat attendu : Lignes rouges dans l'interface Hubble, statut "dropped" pour le trafic vers 'world'.
 
+<img width="1644" height="831" alt="Capture d’écran 2026-01-31 174836" src="https://github.com/user-attachments/assets/00668e6d-2548-4a35-8bff-fc348d3f9851" />
 
 
 
