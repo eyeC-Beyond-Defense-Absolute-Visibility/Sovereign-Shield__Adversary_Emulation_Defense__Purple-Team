@@ -93,3 +93,9 @@ Pod Tracer	VM Windows (129)	HTTP GET	ALLOWED ✅
 Pod Tracer	VM Windows (129)	HTTP POST	REJECTED (L7) 🛡️
 
 Screenshots:
+<img width="1644" height="831" alt="Capture d’écran 2026-01-31 174836" src="https://github.com/user-attachments/assets/0d92898e-4d91-4a42-a36d-ec1405232467" />
+<img width="1177" height="1017" alt="Capture d’écran 2026-02-02 175258" src="https://github.com/user-attachments/assets/b8ced783-7059-412e-867f-b239a70785d6" />
+<img width="627" height="356" alt="Capture d’écran 2026-02-02 154702" src="https://github.com/user-attachments/assets/ce70498c-5750-4ab4-a438-55a58d74ef62" />
+
+
+
