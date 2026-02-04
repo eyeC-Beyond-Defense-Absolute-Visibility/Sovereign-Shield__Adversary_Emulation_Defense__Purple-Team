@@ -8,7 +8,7 @@ spec:
       run: tracer
   egress:
   - toCIDR:
-    - "192.168.19.129/32" # Allow ONLY your Windows VM --- Autorise UNIQUEMENT ta VM Windows
+    - "192.16X.XX.XXX/32" # Allow ONLY your Windows VM --- Autorise UNIQUEMENT ta VM Windows
     toPorts:
     - ports:
       - port: "80"
