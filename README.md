@@ -1,6 +1,5 @@
 🛡️ Sovereign Shield
-	Note: If you are having display problems, click on README.md and then select Blame instead of Preview or Code --- si vous avez les difficultés d'affichage, cliquer sur README.md puis sélectionnez Blame au lieu de Preview ou Code
-
+	🛠️ Display Note / Note d'affichage : If the formatting looks broken, try viewing the [Raw file] or the Blame view --- Si le formatage semble incorrect, essayez de visualiser le fichier Brut (Raw) ou le mode Blame.
 
 Phase I: The Foundations
 
