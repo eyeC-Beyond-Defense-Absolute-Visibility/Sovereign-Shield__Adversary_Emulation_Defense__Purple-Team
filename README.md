@@ -1,7 +1,8 @@
 🛡️ Sovereign Shield
+	Note: If you are having display problems, click on README.md and then select Blame instead of Preview or Code --- si vous avez les difficultés d'affichage, cliquer sur README.md puis sélectionnez Blame au lieu de Preview ou Code
 
 
-Phase 1: The Foundations
+Phase I: The Foundations
 
 
 
