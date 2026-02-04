@@ -1,6 +1,7 @@
 🛡️ Sovereign Shield - Phase 1: The Foundations
 
 This document describes the setup of the core infrastructure and the eBPF firewall. --- Ce document décrit la mise en place de l'infrastructure de base et du pare-feu eBPF.
+
 📋 1. Ansible Setup --- Préparation & Installation d'Ansible
 Goal: Install the orchestration tool on your control machine (Kali) --- Objectif : Installer l'outil d'orchestration sur votre machine de contrôle (Kali).
  # Update the system and install Ansible --- Mettre à jour le système et installer Ansible
