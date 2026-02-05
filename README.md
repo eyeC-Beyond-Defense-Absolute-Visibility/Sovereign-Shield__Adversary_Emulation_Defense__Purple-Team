@@ -66,8 +66,8 @@ Important Points --- Points importants:
 
 
 🧪 4. Testing the Shield --- Test du Bouclier
-	- Goal: Verify that the policy effectively blocks unauthorized traffic --- Objectif : Vérifier que la politique bloque efficacement le trafic non autorisé.
-		- Step 1: Create a test pod --- Créer un pod de test: 
+ - Goal: Verify that the policy effectively blocks unauthorized traffic --- Objectif : Vérifier que la politique bloque efficacement le trafic non autorisé.
+  - Step 1: Create a test pod --- Créer un pod de test: 
 			- sudo k3s kubectl run tracer --image=curlimages/curl -- sh -c "while true; do curl -sL google.com > /dev/null; sleep 2; done"
 		- Step 2: Apply the Security Policy --- Appliquer la politique de sécurité
 			- sudo k3s kubectl apply -f shield-policy.yaml
