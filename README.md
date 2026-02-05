@@ -23,3 +23,22 @@ ansible/
 ├── policies/             # Cilium security policies (.yaml)
 │   └── shield-policy.yaml
 └── inventory.ini         # Target machines inventory
+
+🧰 Requirements — Prérequis
+
+Kali, Debian and Windows VMs (NAT / Internal Network)
+
+Ansible
+
+Note
+Ansible is used to automate node configuration.
+Ansible permet d’automatiser la configuration des nœuds.
+
+📋 1. Ansible Setup — Installation d’Ansible
+
+Goal / Objectif
+Install the orchestration tool on the control machine (Kali).
+Installer l’outil d’orchestration sur la machine de contrôle (Kali).
+
+sudo apt update && sudo apt install ansible -y
+ansible --version
