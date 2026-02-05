@@ -173,7 +173,7 @@ Selective HTTP method filtering prevents data exfiltration.
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
 
 
-*# 🗺️ Phase II — Active Defense & Threat Containment*
+# *🗺️ Phase II — Active Defense & Threat Containment*
 
 In this phase, the project evolves from a **static Zero Trust perimeter** to an **active defense infrastructure** capable of **detecting, alerting, and containing threats in real time**.
 
