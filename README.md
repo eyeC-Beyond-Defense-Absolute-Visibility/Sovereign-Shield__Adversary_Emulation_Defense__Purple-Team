@@ -6,7 +6,7 @@
 
 ---
 
-## 🔰 Phase I — Foundations
+# 🔰 Phase I — Foundations
 
 This phase describes the setup of the **core infrastructure** and an **eBPF-based firewall** using **K3s + Cilium**.  
 Cette phase décrit la mise en place de l’**infrastructure de base** et d’un **pare-feu eBPF** avec **K3s + Cilium**.
