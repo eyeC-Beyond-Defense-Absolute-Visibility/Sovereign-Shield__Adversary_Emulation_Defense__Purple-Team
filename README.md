@@ -54,13 +54,13 @@ Important Points --- Points importants:
 
 
 🛡️ 3. Goal: Install K3s without default networking and replace it with Cilium (eBPF) --- Objectif : Installer K3s sans réseau par défaut et le remplacer par Cilium (eBPF).
-	 a- Install K3s without Flannel/Kube-proxy --- Installer K3s sans Flannel ni Kube-proxy
+ - Install K3s without Flannel/Kube-proxy --- Installer K3s sans Flannel ni Kube-proxy
   		sudo curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--flannel-backend=none --disable-network-policy --disable traefik" sh -
-	 b- Export the cluster configuration --- Exporter la configuration du cluster
+ - Export the cluster configuration --- Exporter la configuration du cluster
  		 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
-	 c- Install Cilium CLI & deploy the agent --- Installer le CLI Cilium et déployer l'agent
+ - Install Cilium CLI & deploy the agent --- Installer le CLI Cilium et déployer l'agent
   		sudo -E cilium install --set k8sServiceHost=127.0.0.1 --set k8sServicePort=6443
-	 d- Enable Hubble for visibility --- Activer Hubble pour la visibilité
+ - Enable Hubble for visibility --- Activer Hubble pour la visibilité
   		sudo -E cilium hubble enable --ui
 
 
