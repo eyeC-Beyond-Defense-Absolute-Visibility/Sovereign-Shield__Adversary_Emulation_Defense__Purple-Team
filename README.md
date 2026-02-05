@@ -48,6 +48,8 @@ Goal / Objectif
 Install the orchestration tool on the control machine (Kali).
 Installer l’outil d’orchestration sur la machine de contrôle (Kali).
 
+## 🖥️ Lab Environment Overview (VMware)
+
 > 📌 **VMware Workstation / ESXi Topology**  
 <img width="3839" height="2293" alt="Screenshot of my VMware with used machines" src="https://github.com/user-attachments/assets/ee6b86a3-2c61-42f6-8853-a944fda849ec" />
 
@@ -225,7 +227,6 @@ Sovereign-Shield/
 
 ---
 
-## 🖥️ Lab Environment Overview (VMware)
 
 This phase is executed in a **hybrid virtualized laboratory** designed to simulate real-world attack paths and defensive controls.
 
