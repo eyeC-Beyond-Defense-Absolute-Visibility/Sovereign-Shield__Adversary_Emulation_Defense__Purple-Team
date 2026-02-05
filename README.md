@@ -24,21 +24,20 @@ ansible/
 │   └── shield-policy.yaml
 └── inventory.ini         # Target machines inventory
 
-🧰 Requirements — Prérequis
 
-Kali, Debian and Windows VMs (NAT / Internal Network)
 
-Ansible
 
-Note
-Ansible is used to automate node configuration.
-Ansible permet d’automatiser la configuration des nœuds.
 
-📋 1. Ansible Setup — Installation d’Ansible
 
-Goal / Objectif
-Install the orchestration tool on the control machine (Kali).
-Installer l’outil d’orchestration sur la machine de contrôle (Kali).
+ssss
 
-sudo apt update && sudo apt install ansible -y
-ansible --version
+
+xxxx
+
+
+
+| Source     | Destination       | Protocol  | Action       |
+| ---------- | ----------------- | --------- | ------------ |
+| Pod Tracer | Internet (Google) | HTTP 80   | DROPPED ❌    |
+| Pod Tracer | Windows VM        | HTTP GET  | ALLOWED ✅    |
+| Pod Tracer | Windows VM        | HTTP POST | REJECTED 🛡️ |
