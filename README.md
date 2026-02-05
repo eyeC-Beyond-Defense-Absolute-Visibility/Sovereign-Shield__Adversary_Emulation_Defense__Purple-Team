@@ -6,6 +6,10 @@
 ![Status](https://img.shields.io/badge/Phase-I%20Complete-success)
 ![Status](https://img.shields.io/badge/Phase-II%20in%20progression...)
 
+![Status](https://img.shields.io/badge/Phase-I%20In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Phase-I-Security%20In%20Progress-orange)
+![Roadmap](https://img.shields.io/badge/Roadmap-Phase%20I%20→%20II-blue)
+
 
 > **Display note / Note d’affichage**  
 > If the formatting looks broken, try viewing the **Raw file** or the **Blame view**.  
