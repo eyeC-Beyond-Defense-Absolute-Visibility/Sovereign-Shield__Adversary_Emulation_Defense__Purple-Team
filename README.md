@@ -255,53 +255,38 @@ Windows Target
 High-value asset requiring strict protection
 
 ### 🛠️ Automation Scope
-
 Automation is handled via Ansible, enabling repeatable and auditable deployments.
-
 Key capabilities:
-
-Unified Inventory
-Centralized asset management via ansible/inventory.ini
-
-Automated Shield Deployment
-One-command installation of:
-
-K3s
-
-Cilium
-
-Security policies
-
-Health & Reachability Checks
-Automated validation of connectivity and policy enforcement across all nodes
+- Unified Inventory
+- Centralized asset management via ansible/inventory.ini
+- Automated Shield Deployment
+  One-command installation of:
+  - K3s
+  - Cilium
+  - Security policies
+- Health & Reachability Checks
+  Automated validation of connectivity and policy enforcement across all nodes
 
 ### 💡 Automation ensures consistency and reduces configuration drift — a critical requirement in regulated environments.
+
 
 ## 🛡️ Part B — Hardening & GRC (The Compliance Engine)
 
 This section bridges technical enforcement with cybersecurity governance frameworks.
 
 ### 🔍 Intrusion Detection & Prevention (IDS / IPS)
+- eBPF-powered Detection
+  Cilium + Hubble monitor:
+  - Port scans
+  - Unauthorized service access
+  - Suspicious east-west traffic
+- Ghost Pod (Honeypot)
+  A deliberately exposed Kubernetes pod designed to:
+  - Attract malicious connections
+  - Trigger high-severity alerts in Hubble
+  - Validate detection logic without risking real assets
 
-eBPF-powered Detection
-Cilium + Hubble monitor:
-
-Port scans
-
-Unauthorized service access
-
-Suspicious east-west traffic
-
-### 🪤 Ghost Pod (Honeypot)
-A deliberately exposed Kubernetes pod designed to:
-
-Attract malicious connections
-
-Trigger high-severity alerts in Hubble
-
-Validate detection logic without risking real assets
-
-### ⚠️ Any interaction with the Ghost Pod is considered malicious by design.
+⚠️ Any interaction with the Ghost Pod is considered malicious by design.
 
 | Security Control         | NIST CSF               | ISO 27001                     | SOC 2        |
 | ------------------------ | ---------------------- | ----------------------------- | ------------ |
@@ -309,14 +294,11 @@ Validate detection logic without risking real assets
 | **Real-time Monitoring** | DE.AE (Detection)      | A.12.4 (Logging & Monitoring) | Monitoring   |
 | **Attack Containment**   | RS.RP (Response)       | A.16.1 (Incident Management)  | Availability |
 
-### 🎯 This mapping demonstrates how technical controls support compliance objectives, not just security outcomes.
+🎯 This mapping demonstrates how technical controls support compliance objectives, not just security outcomes.
 
 ### 📸 Phase II — Proof of Concept
-
 This section documents observable security outcomes.
-
-### 🧪 Evidence will include:
-- Hubble flow visualizations
+🧪 Evidence will include:- Hubble flow visualizations
 - Blocked attack attempts
 - Honeypot interaction alerts
 - Policy enforcement under attack conditions
