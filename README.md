@@ -162,5 +162,151 @@ Selective HTTP method filtering prevents data exfiltration.
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
 
 
-# 🔰 Phase II — Automation
- []
+# 🗺️ Phase II — Active Defense & Threat Containment
+
+Welcome to the second evolution of **Sovereign Shield**.
+
+In this phase, the project evolves from a **static Zero Trust perimeter** to an **active defense infrastructure** capable of **detecting, alerting, and containing threats in real time**.
+
+This phase introduces:
+- Explicit threat actors
+- Automated orchestration
+- Intrusion detection & prevention (IDS/IPS)
+- Governance, Risk & Compliance (GRC) alignment
+
+---
+
+## 🖥️ Lab Environment Overview (VMware)
+
+This phase is executed in a **hybrid virtualized laboratory** designed to simulate real-world attack paths and defensive controls.
+
+> 📌 **VMware Workstation / ESXi Topology**  
+> *(Screenshots will be added below)*
+
+<!-- INSERT VMWARE TOPOLOGY SCREENSHOTS HERE -->
+<!-- Example:
+![VMware Lab Overview](./docs/images/vmware-overview.png)
+-->
+
+The environment is intentionally segmented to:
+- Simulate attacker pivoting
+- Observe lateral movement
+- Validate containment at the kernel level (eBPF)
+
+---
+
+## 🌿 Branch Strategy — Project Complexity Expansion
+
+To preserve Phase I stability while enabling advanced experimentation, **Phase II is developed in a dedicated Git branch**.
+
+> 🎯 **Why a new branch?**
+- Introduce additional nodes and attack surfaces
+- Experiment with automation and IDS/IPS logic
+- Avoid regression on the foundational security baseline
+
+<!-- INSERT GIT COMMAND SCREENSHOT HERE -->
+<!-- Example:
+![Git Branch Creation](./docs/images/git-branch-phase2.png)
+-->
+
+Example workflow:
+```
+git checkout -b phase-2-active-defense
+```
+🏗️ Part A — Automation (The Orchestrator)
+
+This section focuses on Infrastructure as Code (IaC) and orchestration of a multi-node adversarial environment.
+
+🌐 Hybrid Laboratory Architecture
+
+Roles in the environment:
+
+🛡️ The Shield
+Debian node running K3s + Cilium (eBPF)
+Acts as a network enforcement point and IPS
+
+☠️ Threat Actors
+
+Metasploitable2
+Vulnerable system used to simulate exploitation attempts
+
+Ubuntu Server
+Potentially compromised node for lateral movement scenarios
+
+🏛️ The Sovereign Data
+
+Windows Target
+High-value asset requiring strict protection
+
+🛠️ Automation Scope
+
+Automation is handled via Ansible, enabling repeatable and auditable deployments.
+
+Key capabilities:
+
+Unified Inventory
+Centralized asset management via ansible/inventory.ini
+
+Automated Shield Deployment
+One-command installation of:
+
+K3s
+
+Cilium
+
+Security policies
+
+Health & Reachability Checks
+Automated validation of connectivity and policy enforcement across all nodes
+
+💡 Automation ensures consistency and reduces configuration drift — a critical requirement in regulated environments.
+
+🛡️ Part B — Hardening & GRC (The Compliance Engine)
+
+This section bridges technical enforcement with cybersecurity governance frameworks.
+
+🔍 Intrusion Detection & Prevention (IDS / IPS)
+
+eBPF-powered Detection
+Cilium + Hubble monitor:
+
+Port scans
+
+Unauthorized service access
+
+Suspicious east-west traffic
+
+🪤 Ghost Pod (Honeypot)
+A deliberately exposed Kubernetes pod designed to:
+
+Attract malicious connections
+
+Trigger high-severity alerts in Hubble
+
+Validate detection logic without risking real assets
+
+⚠️ Any interaction with the Ghost Pod is considered malicious by design.
+
+| Security Control         | NIST CSF               | ISO 27001                     | SOC 2        |
+| ------------------------ | ---------------------- | ----------------------------- | ------------ |
+| **Micro-segmentation**   | PR.AC (Access Control) | A.13.1 (Network Security)     | Security     |
+| **Real-time Monitoring** | DE.AE (Detection)      | A.12.4 (Logging & Monitoring) | Monitoring   |
+| **Attack Containment**   | RS.RP (Response)       | A.16.1 (Incident Management)  | Availability |
+
+🎯 This mapping demonstrates how technical controls support compliance objectives, not just security outcomes.
+
+📸 Phase II — Proof of Concept
+
+This section documents observable security outcomes.
+
+🧪 Evidence will include:
+- Hubble flow visualizations
+- Blocked attack attempts
+- Honeypot interaction alerts
+- Policy enforcement under attack conditions
+
+<!-- v2 SCREENSHOTS HERE -->
+
+🚧 Status
+Phase II is actively evolving as new automation and detection scenarios are introduced.
+
