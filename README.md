@@ -21,7 +21,7 @@ Cette phase décrit la mise en place de l’**infrastructure de base** et d’un
 
 ---
 
-## 📁 Structure of phase I — Structure de la phase II
+## 📁 Structure of phase I — Structure de la phase I
 
 ```
 ansible/
@@ -42,12 +42,6 @@ Note
 Ansible is used to automate node configuration.
 Ansible permet d’automatiser la configuration des nœuds.
 
-### 📋 1. Ansible Setup — Installation d’Ansible
-
-Goal / Objectif
-Install the orchestration tool on the control machine (Kali).
-Installer l’outil d’orchestration sur la machine de contrôle (Kali).
-
 ## 🖥️ Lab Environment Overview (VMware)
 
 > 📌 **VMware Workstation / ESXi Topology**  
@@ -57,6 +51,14 @@ Installer l’outil d’orchestration sur la machine de contrôle (Kali).
 - Simulate attacker pivoting
 - Observe lateral movement
 - Validate containment at the kernel level (eBPF)
+
+### 📋 1. Ansible Setup — Installation d’Ansible
+
+Goal / Objectif
+Install the orchestration tool on the control machine (Kali).
+Installer l’outil d’orchestration sur la machine de contrôle (Kali).
+
+
 
 ```
 sudo apt update && sudo apt install ansible -y
