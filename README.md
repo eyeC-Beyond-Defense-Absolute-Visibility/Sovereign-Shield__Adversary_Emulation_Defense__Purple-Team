@@ -54,23 +54,23 @@ Important Points --- Points importants:
 
 
 🛡️ 3. Goal: Install K3s without default networking and replace it with Cilium (eBPF) --- Objectif : Installer K3s sans réseau par défaut et le remplacer par Cilium (eBPF).
-	 # a. Install K3s without Flannel/Kube-proxy --- Installer K3s sans Flannel ni Kube-proxy
+	 a- Install K3s without Flannel/Kube-proxy --- Installer K3s sans Flannel ni Kube-proxy
   		sudo curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--flannel-backend=none --disable-network-policy --disable traefik" sh -
-	 # b. Export the cluster configuration --- Exporter la configuration du cluster
+	 b- Export the cluster configuration --- Exporter la configuration du cluster
  		 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
-	 # c. Install Cilium CLI & deploy the agent --- Installer le CLI Cilium et déployer l'agent
+	 c- Install Cilium CLI & deploy the agent --- Installer le CLI Cilium et déployer l'agent
   		sudo -E cilium install --set k8sServiceHost=127.0.0.1 --set k8sServicePort=6443
-	 # d. Enable Hubble for visibility --- Activer Hubble pour la visibilité
+	 d- Enable Hubble for visibility --- Activer Hubble pour la visibilité
   		sudo -E cilium hubble enable --ui
 
 
 
 🧪 4. Testing the Shield --- Test du Bouclier
-Goal: Verify that the policy effectively blocks unauthorized traffic --- Objectif : Vérifier que la politique bloque efficacement le trafic non autorisé.
- Step 1: Create a test pod --- Créer un pod de test: 
- 	sudo k3s kubectl run tracer --image=curlimages/curl -- sh -c "while true; do curl -sL google.com > /dev/null; sleep 2; done"
- Step 2: Apply the Security Policy --- Appliquer la politique de sécurité
- 	sudo k3s kubectl apply -f shield-policy.yaml
+- Goal: Verify that the policy effectively blocks unauthorized traffic --- Objectif : Vérifier que la politique bloque efficacement le trafic non autorisé.
+ - Step 1: Create a test pod --- Créer un pod de test: 
+   - sudo k3s kubectl run tracer --image=curlimages/curl -- sh -c "while true; do curl -sL google.com > /dev/null; sleep 2; done"
+ - Step 2: Apply the Security Policy --- Appliquer la politique de sécurité
+   - sudo k3s kubectl apply -f shield-policy.yaml
 
 
 
