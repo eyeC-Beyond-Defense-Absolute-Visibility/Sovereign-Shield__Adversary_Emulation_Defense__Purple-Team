@@ -42,7 +42,7 @@ Note : Ansible nous permettra d'automatiser la configuration de nos futurs nœud
 
 
 🏗️ 2. VM Provisioning --- Création des Machines Virtuelles
-Goal: Deploy the nodes for the security lab --- Objectif : Déployer les nœuds pour le laboratoire de sécurité.
+	- Goal: Deploy the nodes for the security lab --- Objectif : Déployer les nœuds pour le laboratoire de sécurité.
 Machine			OS				Role							RAM
 Control-Plane	Debian/Kali		K3s Master & Cilium				4GB+
 Target-Win		Windows 10/11	Attack Target / Cible d'attaque	4GB
@@ -66,11 +66,11 @@ Important Points --- Points importants:
 
 
 🧪 4. Testing the Shield --- Test du Bouclier
-- Goal: Verify that the policy effectively blocks unauthorized traffic --- Objectif : Vérifier que la politique bloque efficacement le trafic non autorisé.
- - Step 1: Create a test pod --- Créer un pod de test: 
-   - sudo k3s kubectl run tracer --image=curlimages/curl -- sh -c "while true; do curl -sL google.com > /dev/null; sleep 2; done"
- - Step 2: Apply the Security Policy --- Appliquer la politique de sécurité
-   - sudo k3s kubectl apply -f shield-policy.yaml
+	- Goal: Verify that the policy effectively blocks unauthorized traffic --- Objectif : Vérifier que la politique bloque efficacement le trafic non autorisé.
+		- Step 1: Create a test pod --- Créer un pod de test: 
+			- sudo k3s kubectl run tracer --image=curlimages/curl -- sh -c "while true; do curl -sL google.com > /dev/null; sleep 2; done"
+		- Step 2: Apply the Security Policy --- Appliquer la politique de sécurité
+			- sudo k3s kubectl apply -f shield-policy.yaml
 
 
 
