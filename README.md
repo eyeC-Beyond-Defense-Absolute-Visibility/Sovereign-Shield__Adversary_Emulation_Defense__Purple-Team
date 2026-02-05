@@ -184,7 +184,7 @@ This phase is executed in a **hybrid virtualized laboratory** designed to simula
 > 📌 **VMware Workstation / ESXi Topology**  
 <img width="3839" height="2293" alt="Screenshot of my VMware with used machines" src="https://github.com/user-attachments/assets/ee6b86a3-2c61-42f6-8853-a944fda849ec" />
 
-The environment is intentionally segmented to:
+> 📌 **The environment is intentionally segmented to:**  
 - Simulate attacker pivoting
 - Observe lateral movement
 - Validate containment at the kernel level (eBPF)
@@ -208,7 +208,7 @@ Example workflow:
 git checkout -b phase-2-active-defense
 ```
 
-Creation of a new .ini file: v2-inventory.ini
+> 📌 **Creation of a new .ini file: v2-inventory.ini**
 ```
 [k8s_nodes]
 # EN: The heart of the shield (K3s Cluster + Cilium eBPF)
