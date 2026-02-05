@@ -14,7 +14,7 @@
 
 ---
 
-# 🔰 Phase I — Genesis of Sovereign Shield (Core Infrastructure)
+*# 🔰 Phase I — Genesis of Sovereign Shield (Core Infrastructure)*
 
 This phase describes the setup of the **core infrastructure** and an **eBPF-based firewall** using **K3s + Cilium**.  
 Cette phase décrit la mise en place de l’**infrastructure de base** et d’un **pare-feu eBPF** avec **K3s + Cilium**.
@@ -173,7 +173,7 @@ Selective HTTP method filtering prevents data exfiltration.
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
 
 
-# 🗺️ Phase II — Active Defense & Threat Containment
+*# 🗺️ Phase II — Active Defense & Threat Containment*
 
 In this phase, the project evolves from a **static Zero Trust perimeter** to an **active defense infrastructure** capable of **detecting, alerting, and containing threats in real time**.
 
