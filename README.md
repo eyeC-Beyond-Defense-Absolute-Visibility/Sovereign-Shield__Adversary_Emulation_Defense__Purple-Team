@@ -177,7 +177,7 @@ This phase introduces:
 - Governance, Risk & Compliance (GRC) alignment
 
 ## 📁 Project Structure — Structure du projet
-
+```
 Sovereign-Shield/
 ├── ansible/
 │   ├── inventory/
@@ -214,6 +214,7 @@ Sovereign-Shield/
 │
 └── docs/
     └── purple-team-guide.md
+```
 
 ---
 
