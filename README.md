@@ -65,7 +65,6 @@ Install K3s without default networking and replace it with Cilium (eBPF).
 
 Install K3s (No Flannel / No kube-proxy)
 ```
-
 curl -sfL https://get.k3s.io | \
 INSTALL_K3S_EXEC="--flannel-backend=none --disable-network-policy --disable traefik" \
 sh -
@@ -84,12 +83,12 @@ cilium install \
 
 cilium hubble enable --ui
 ```
-🧪 4. Testing the Shield — Tests du bouclier
+### 🧪 4. Testing the Shield — Tests du bouclier
 
 Goal / Objectif
 Verify that the security policy blocks unauthorized traffic.
 
-Step 1 — Create a Test Pod
+#### Step 1 — Create a Test Pod
 ```
 k3s kubectl run tracer \
   --image=curlimages/curl \
@@ -97,14 +96,14 @@ k3s kubectl run tracer \
 ```
 
 
-Step 2 — Apply the Security Policy
+#### Step 2 — Apply the Security Policy
 ```
 k3s kubectl apply -f shield-policy.yaml
 
 ```
 
 
-👀 Visual Verification — Vérification visuelle
+#### 👀 Visual Verification — Vérification visuelle
 
 Launch Hubble UI:
 ```
@@ -157,4 +156,4 @@ GET requests allowed, POST requests blocked (eBPF proxy).
 
 Selective HTTP method filtering prevents data exfiltration.
 
-<img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" /> ```
+<img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
