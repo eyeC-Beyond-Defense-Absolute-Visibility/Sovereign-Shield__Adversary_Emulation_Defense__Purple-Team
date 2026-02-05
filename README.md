@@ -131,29 +131,25 @@ Zero-Trust perimeter enforced (L3 / L4 / L7)
 | Pod Tracer | Windows VM        | HTTP POST | REJECTED 🛡️ |
 
 ## 📸 Screenshots — Captures d’écran
-🔓 Before — Default Kubernetes Behavior
-
-### Traffic flows freely without restrictions.
+### 🔓 Before — Default Kubernetes Behavior
+Traffic flows freely without restrictions.
 
 <img src="https://github.com/user-attachments/assets/19b1428e-5f39-4f69-9275-6beebf011506" />
 
 
-###🔒 After — Zero-Trust eBPF Shield Enabled
-
+##🔒 After — Zero-Trust eBPF Shield Enabled
 Unauthorized egress traffic is blocked.
 
 <img src="https://github.com/user-attachments/assets/a354abd1-cf00-4424-bd52-59fe0560d2bc" />
 
 
 ### 🔍 Layer 7 (L7) Inspection — HTTP Filtering
-
 GET requests allowed, POST requests blocked (eBPF proxy).
 
 <img src="https://github.com/user-attachments/assets/8c0b8c4e-7963-4085-9fdb-172d39d1f0ff" />
 
 
-### 🧠 Advanced L7 Enforcement
-
+## 🧠 Advanced L7 Enforcement
 Selective HTTP method filtering prevents data exfiltration.
 
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
