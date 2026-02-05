@@ -162,5 +162,5 @@ Selective HTTP method filtering prevents data exfiltration.
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
 
 
-# 🔰 Phase II — Foundations
+# 🔰 Phase II — Automation
  []
