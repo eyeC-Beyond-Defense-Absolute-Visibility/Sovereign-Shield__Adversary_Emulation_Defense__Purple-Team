@@ -4,7 +4,6 @@
 ![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux&logoColor=white)
 ![Security](https://img.shields.io/badge/Security-Zero--Trust-red)
 ![Status](https://img.shields.io/badge/Phase-I%20Complete-success)
-![Status](https://img.shields.io/badge/Phase-II%20in%20progression...)
 ![Status](https://img.shields.io/badge/Phase-I%20In%20Progress-yellow)
 
 
