@@ -47,6 +47,15 @@ Ansible permet d’automatiser la configuration des nœuds.
 Goal / Objectif
 Install the orchestration tool on the control machine (Kali).
 Installer l’outil d’orchestration sur la machine de contrôle (Kali).
+
+> 📌 **VMware Workstation / ESXi Topology**  
+<img width="3839" height="2293" alt="Screenshot of my VMware with used machines" src="https://github.com/user-attachments/assets/ee6b86a3-2c61-42f6-8853-a944fda849ec" />
+
+> 📌 **The environment is intentionally segmented to:**  
+- Simulate attacker pivoting
+- Observe lateral movement
+- Validate containment at the kernel level (eBPF)
+
 ```
 sudo apt update && sudo apt install ansible -y
 ansible --version
@@ -166,8 +175,6 @@ Selective HTTP method filtering prevents data exfiltration.
 
 # 🗺️ Phase II — Active Defense & Threat Containment
 
-Welcome to the second evolution of **Sovereign Shield**.
-
 In this phase, the project evolves from a **static Zero Trust perimeter** to an **active defense infrastructure** capable of **detecting, alerting, and containing threats in real time**.
 
 This phase introduces:
@@ -221,14 +228,6 @@ Sovereign-Shield/
 ## 🖥️ Lab Environment Overview (VMware)
 
 This phase is executed in a **hybrid virtualized laboratory** designed to simulate real-world attack paths and defensive controls.
-
-> 📌 **VMware Workstation / ESXi Topology**  
-<img width="3839" height="2293" alt="Screenshot of my VMware with used machines" src="https://github.com/user-attachments/assets/ee6b86a3-2c61-42f6-8853-a944fda849ec" />
-
-> 📌 **The environment is intentionally segmented to:**  
-- Simulate attacker pivoting
-- Observe lateral movement
-- Validate containment at the kernel level (eBPF)
 
 ---
 
