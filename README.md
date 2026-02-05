@@ -51,36 +51,6 @@ sudo apt update && sudo apt install ansible -y
 ansible --version
 ```
 
-```
-[k8s_nodes]
-# EN: The heart of the shield (K3s Cluster + Cilium eBPF)
-# FR: Le cœur du bouclier (Cluster K3s + Cilium eBPF)
-debian-shield ansible_host=192.16X.XX.XXX ansible_user=your_username
-
-[attackers]
-# EN: Threat 1: Potentially compromised Linux server
-# FR: Menace 1: Serveur Linux potentiellement compromis
-ubuntu-server ansible_host=192.16X.XX.XXX ansible_user=your_username
-
-# EN: Threat 2: The ultimate vulnerable machine for your penetration tests
-# FR: Menace 2: La machine vulnérable par excellence pour tes tests de pénétration
-metasploitable ansible_host=192.16X.XX.XXX ansible_user=your_username
-
-[targets]
-# EN: The critical target to protect (Sensitive / Sovereign Data)
-# FR: La cible critique à protéger (Données sensibles / Données souveraines)
-windows-target ansible_host=192.16X.XX.XXX ansible_user=your_username
-
-[all:vars]
-# EN: Define the Python interpreter for all hosts
-# FR: Définir l'interpréteur Python pour tous les hôtes
-ansible_python_interpreter=/usr/bin/python3
-
-# EN: Optional: Ignore SSH key verification for your local lab
-# FR: Optionnel: ignore la vérification des clés SSH pour ton lab local
-ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-```
-
 ### 🏗️ 2. VM Provisioning — Création des machines virtuelles
 
 Goal / Objectif
@@ -236,6 +206,36 @@ To preserve Phase I stability while enabling advanced experimentation, **Phase I
 Example workflow:
 ```
 git checkout -b phase-2-active-defense
+```
+
+```Creation of a new .ini file: v2-inventory.ini
+[k8s_nodes]
+# EN: The heart of the shield (K3s Cluster + Cilium eBPF)
+# FR: Le cœur du bouclier (Cluster K3s + Cilium eBPF)
+debian-shield ansible_host=192.16X.XX.XXX ansible_user=your_username
+
+[attackers]
+# EN: Threat 1: Potentially compromised Linux server
+# FR: Menace 1: Serveur Linux potentiellement compromis
+ubuntu-server ansible_host=192.16X.XX.XXX ansible_user=your_username
+
+# EN: Threat 2: The ultimate vulnerable machine for your penetration tests
+# FR: Menace 2: La machine vulnérable par excellence pour tes tests de pénétration
+metasploitable ansible_host=192.16X.XX.XXX ansible_user=your_username
+
+[targets]
+# EN: The critical target to protect (Sensitive / Sovereign Data)
+# FR: La cible critique à protéger (Données sensibles / Données souveraines)
+windows-target ansible_host=192.16X.XX.XXX ansible_user=your_username
+
+[all:vars]
+# EN: Define the Python interpreter for all hosts
+# FR: Définir l'interpréteur Python pour tous les hôtes
+ansible_python_interpreter=/usr/bin/python3
+
+# EN: Optional: Ignore SSH key verification for your local lab
+# FR: Optionnel: ignore la vérification des clés SSH pour ton lab local
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 ```
 🏗️ Part A — Automation (The Orchestrator)
 
