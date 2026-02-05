@@ -21,7 +21,7 @@ Cette phase décrit la mise en place de l’**infrastructure de base** et d’un
 
 ---
 
-## 📁 Project Structure — Structure du projet
+## 📁 Structure of phase I — Structure de la phase II
 
 ```
 ansible/
@@ -176,7 +176,7 @@ This phase introduces:
 - Intrusion detection & prevention (IDS/IPS)
 - Governance, Risk & Compliance (GRC) alignment
 
-## 📁 Project Structure — Structure du projet
+## 📁 Structure of phase II — Structure de la phase II
 ```
 Sovereign-Shield/
 ├── ansible/
