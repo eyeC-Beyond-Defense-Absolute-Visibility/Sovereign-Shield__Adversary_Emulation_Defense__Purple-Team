@@ -243,23 +243,14 @@ ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 This section focuses on Infrastructure as Code (IaC) and orchestration of a multi-node adversarial environment.
 
 ### 🌐 Hybrid Laboratory Architecture
-
 Roles in the environment:
-
-### 🛡️ The Shield
-Debian node running K3s + Cilium (eBPF)
-Acts as a network enforcement point and IPS
-
-### ☠️ Threat Actors
-
-Metasploitable2
-Vulnerable system used to simulate exploitation attempts
-
-Ubuntu Server
-Potentially compromised node for lateral movement scenarios
-
-### 🏛️ The Sovereign Data
-
+- ### 🛡️ The Shield
+  - node running K3s + Cilium (eBPF)
+  - Acts as a network enforcement point and IPS
+- ### ☠️ Threat Actors
+  - Metasploitable2: Vulnerable system used to simulate exploitation attempts
+  - Ubuntu Server: Potentially compromised node for lateral movement scenarios
+- ### 🏛️ The Sovereign Data
 Windows Target
 High-value asset requiring strict protection
 
