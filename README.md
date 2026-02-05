@@ -39,19 +39,23 @@ Ansible permet d’automatiser la configuration des nœuds.
 Goal / Objectif
 Install the orchestration tool on the control machine (Kali).
 Installer l’outil d’orchestration sur la machine de contrôle (Kali).
+```
+sudo apt update && sudo apt install ansible -y
+ansible --version
+```
+🏗️ 2. VM Provisioning — Création des machines virtuelles
+
+Goal / Objectif
+Deploy nodes for the security lab.
+| Machine       | OS              | Role                            | RAM  |
+| ------------- | --------------- | ------------------------------- | ---- |
+| Control-Plane | Debian / Kali   | K3s Master & Cilium             | 4GB+ |
+| Target-Win    | Windows 10 / 11 | Attack Target / Cible d’attaque | 4GB  |
+
+⚠️ Important Notes
+
+All VMs must be on the same NAT / Internal network
+
+K3s + Cilium require at least 4GB RAM to compile eBPF programs
 
 
-
-
-ssss
-
-
-xxxx
-
-
-
-| Source     | Destination       | Protocol  | Action       |
-| ---------- | ----------------- | --------- | ------------ |
-| Pod Tracer | Internet (Google) | HTTP 80   | DROPPED ❌    |
-| Pod Tracer | Windows VM        | HTTP GET  | ALLOWED ✅    |
-| Pod Tracer | Windows VM        | HTTP POST | REJECTED 🛡️ |
