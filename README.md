@@ -94,6 +94,34 @@ Pod Tracer	VM Windows (129)	HTTP POST	REJECTED (L7) 🛡️
 
 SCREENSHOTS --- CAPTURES D'ÉCRAN:
 
+The "Before" State: Open Communication --- Avant l'application du bouclier, le cluster est en mode ouvert (comportement par défaut de Kubernetes).
+	> Baseline Observability: Traffic Flowing Without Restrictions
+		--> * Initial visualization in Hubble UI. Note that all egress traffic to world is marked green (forwarded), indicating that no restrictions are active yet.
+		--> * Visualisation initiale dans Hubble UI. On remarque que tout le trafic sortant vers world est marqué en vert (forwarded), indiquant qu'aucune restriction n'est encore active.
+		<img width="3391" height="1743" alt="W1-Capture" src="https://github.com/user-attachments/assets/19b1428e-5f39-4f69-9275-6beebf011506" />
 
+---
+
+The "After" State: Zero-Trust Implementation --- Le bouclier eBPF est activé. Le trafic est désormais filtré selon nos règles de sécurité.
+	> Egress Lockdown: Blocking Unauthorized External Traffic
+			--> * Security policy enforcement. Hubble instantly shows red lines towards world. The status changes to dropped, proving the pod can no longer communicate with the outside world.
+			--> * Application de la politique de sécurité. Hubble montre instantanément des lignes rouges vers world. Le statut passe à dropped, prouvant que le pod ne peut plus communiquer avec l'extérieur.
+			<img width="3377" height="1744" alt="W2-Capture" src="https://github.com/user-attachments/assets/a354abd1-cf00-4424-bd52-59fe0560d2bc" />
+
+---
+
+Layer 7 Deep Packet Inspection --- Filtrage au niveau de l'application (HTTP).
+	> Advanced L7 Security: Granular HTTP Method Filtering
+		--> * Validation finale du bouclier. Le trafic vers la VM Windows est autorisé pour les requêtes GET (vert), mais Cilium intercepte et bloque les tentatives POST (timeout/reset), empêchant toute exfiltration de données illicite.
+		--> * Final shield validation. Traffic to the Windows VM is allowed for GET requests (green), but Cilium intercepts and blocks POST attempts (timeout/reset), preventing unauthorized data exfiltration.
+		<img width="3401" height="1875" alt="W3-Capture" src="https://github.com/user-attachments/assets/8c0b8c4e-7963-4085-9fdb-172d39d1f0ff" />
+
+---
+
+Advanced Security: Deep Packet Inspection (L7 --- La preuve ultime de la puissance de Cilium : le filtrage au niveau applicatif.
+	> Layer 7 Enforcement: Selective HTTP Method Filtering
+		--> Validation finale du bouclier. Le trafic vers la VM Windows est autorisé pour les requêtes GET (vert), mais les tentatives POST sont bloquées par le proxy eBPF (connection timeout), empêchant toute exfiltration de données.
+		--> Final shield validation. Traffic to the Windows VM is allowed for GET requests (green), but POST attempts are blocked by the eBPF proxy (connection timeout), preventing unauthorized data exfiltration.
+		<img width="3380" height="1724" alt="WX-Capture" src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
 
 
