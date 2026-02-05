@@ -1,4 +1,9 @@
 # 🛡️ Sovereign Shield
+![K3s](https://img.shields.io/badge/Kubernetes-K3s-326ce5?logo=kubernetes&logoColor=white)
+![Cilium](https://img.shields.io/badge/Cilium-eBPF-ffcc00?logo=cilium&logoColor=black)
+![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux&logoColor=white)
+![Security](https://img.shields.io/badge/Security-Zero--Trust-red)
+![Status](https://img.shields.io/badge/Phase-I%20Complete-success)
 
 > **Display note / Note d’affichage**  
 > If the formatting looks broken, try viewing the **Raw file** or the **Blame view**.  
@@ -153,3 +158,7 @@ GET requests allowed, POST requests blocked (eBPF proxy).
 Selective HTTP method filtering prevents data exfiltration.
 
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
+
+
+# 🔰 Phase I — Foundations
+ []
