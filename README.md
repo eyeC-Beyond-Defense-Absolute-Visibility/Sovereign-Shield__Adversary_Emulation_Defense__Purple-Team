@@ -176,6 +176,45 @@ This phase introduces:
 - Intrusion detection & prevention (IDS/IPS)
 - Governance, Risk & Compliance (GRC) alignment
 
+## 📁 Project Structure — Structure du projet
+
+Sovereign-Shield/
+├── ansible/
+│   ├── inventory/
+│   │   ├── inventory.ini
+│   │   ├── v2-inventory.ini
+│   │   └── v2-inventory.example.ini
+│   │
+│   ├── vars/
+│   │   ├── global_config.yml
+│   │   └── production_params.yml
+│   │
+│   ├── playbooks/
+│   │   ├── deploy_shield.yml
+│   │   ├── incident-response/
+│   │   │   ├── isolate_node.yml
+│   │   │   ├── revoke_secrets.yml
+│   │   │   └── gather_evidence.yml
+│   │   └── advanced/
+│   │       └── ...
+│   │
+│   ├── roles/
+│   │   ├── cilium/
+│   │   │   └── ...
+│   │   └── containment/
+│   │       └── ...
+│   │
+│   └── simulations/
+│       ├── lateral_movement/
+│       ├── data_exfiltration/
+│       └── malware_behavior/
+│
+├── policies/
+│   └── ...
+│
+└── docs/
+    └── purple-team-guide.md
+
 ---
 
 ## 🖥️ Lab Environment Overview (VMware)
