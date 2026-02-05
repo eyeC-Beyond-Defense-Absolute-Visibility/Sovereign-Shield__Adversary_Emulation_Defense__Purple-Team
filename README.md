@@ -208,7 +208,8 @@ Example workflow:
 git checkout -b phase-2-active-defense
 ```
 
-```Creation of a new .ini file: v2-inventory.ini
+Creation of a new .ini file: v2-inventory.ini
+```
 [k8s_nodes]
 # EN: The heart of the shield (K3s Cluster + Cilium eBPF)
 # FR: Le cœur du bouclier (Cluster K3s + Cilium eBPF)
@@ -237,19 +238,19 @@ ansible_python_interpreter=/usr/bin/python3
 # FR: Optionnel: ignore la vérification des clés SSH pour ton lab local
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 ```
-🏗️ Part A — Automation (The Orchestrator)
+## 🏗️ Part A — Automation (The Orchestrator)
 
 This section focuses on Infrastructure as Code (IaC) and orchestration of a multi-node adversarial environment.
 
-🌐 Hybrid Laboratory Architecture
+### 🌐 Hybrid Laboratory Architecture
 
 Roles in the environment:
 
-🛡️ The Shield
+### 🛡️ The Shield
 Debian node running K3s + Cilium (eBPF)
 Acts as a network enforcement point and IPS
 
-☠️ Threat Actors
+### ☠️ Threat Actors
 
 Metasploitable2
 Vulnerable system used to simulate exploitation attempts
@@ -257,12 +258,12 @@ Vulnerable system used to simulate exploitation attempts
 Ubuntu Server
 Potentially compromised node for lateral movement scenarios
 
-🏛️ The Sovereign Data
+### 🏛️ The Sovereign Data
 
 Windows Target
 High-value asset requiring strict protection
 
-🛠️ Automation Scope
+### 🛠️ Automation Scope
 
 Automation is handled via Ansible, enabling repeatable and auditable deployments.
 
@@ -283,13 +284,13 @@ Security policies
 Health & Reachability Checks
 Automated validation of connectivity and policy enforcement across all nodes
 
-💡 Automation ensures consistency and reduces configuration drift — a critical requirement in regulated environments.
+### 💡 Automation ensures consistency and reduces configuration drift — a critical requirement in regulated environments.
 
-🛡️ Part B — Hardening & GRC (The Compliance Engine)
+## 🛡️ Part B — Hardening & GRC (The Compliance Engine)
 
 This section bridges technical enforcement with cybersecurity governance frameworks.
 
-🔍 Intrusion Detection & Prevention (IDS / IPS)
+### 🔍 Intrusion Detection & Prevention (IDS / IPS)
 
 eBPF-powered Detection
 Cilium + Hubble monitor:
@@ -300,7 +301,7 @@ Unauthorized service access
 
 Suspicious east-west traffic
 
-🪤 Ghost Pod (Honeypot)
+### 🪤 Ghost Pod (Honeypot)
 A deliberately exposed Kubernetes pod designed to:
 
 Attract malicious connections
@@ -309,7 +310,7 @@ Trigger high-severity alerts in Hubble
 
 Validate detection logic without risking real assets
 
-⚠️ Any interaction with the Ghost Pod is considered malicious by design.
+### ⚠️ Any interaction with the Ghost Pod is considered malicious by design.
 
 | Security Control         | NIST CSF               | ISO 27001                     | SOC 2        |
 | ------------------------ | ---------------------- | ----------------------------- | ------------ |
@@ -317,13 +318,13 @@ Validate detection logic without risking real assets
 | **Real-time Monitoring** | DE.AE (Detection)      | A.12.4 (Logging & Monitoring) | Monitoring   |
 | **Attack Containment**   | RS.RP (Response)       | A.16.1 (Incident Management)  | Availability |
 
-🎯 This mapping demonstrates how technical controls support compliance objectives, not just security outcomes.
+### 🎯 This mapping demonstrates how technical controls support compliance objectives, not just security outcomes.
 
-📸 Phase II — Proof of Concept
+### 📸 Phase II — Proof of Concept
 
 This section documents observable security outcomes.
 
-🧪 Evidence will include:
+### 🧪 Evidence will include:
 - Hubble flow visualizations
 - Blocked attack attempts
 - Honeypot interaction alerts
@@ -331,6 +332,6 @@ This section documents observable security outcomes.
 
 <!-- v2 SCREENSHOTS HERE -->
 
-🚧 Status
+### 🚧 Status
 Phase II is actively evolving as new automation and detection scenarios are introduced.
 
