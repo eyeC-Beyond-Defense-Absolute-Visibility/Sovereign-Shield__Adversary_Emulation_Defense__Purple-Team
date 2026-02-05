@@ -4,6 +4,8 @@
 ![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux&logoColor=white)
 ![Security](https://img.shields.io/badge/Security-Zero--Trust-red)
 ![Status](https://img.shields.io/badge/Phase-I%20Complete-success)
+![Status](https://img.shields.io/badge/Phase-II%20in%20progression...)
+
 
 > **Display note / Note d’affichage**  
 > If the formatting looks broken, try viewing the **Raw file** or the **Blame view**.  
@@ -160,5 +162,5 @@ Selective HTTP method filtering prevents data exfiltration.
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" />
 
 
-# 🔰 Phase I — Foundations
+# 🔰 Phase II — Foundations
  []
