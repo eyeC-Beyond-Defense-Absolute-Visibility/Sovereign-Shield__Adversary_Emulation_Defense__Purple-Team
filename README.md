@@ -1,5 +1,7 @@
 🛡️ Sovereign Shield
 
+	🛠️ Display Note / Note d'affichage :If the formatting looks broken, try viewing the [Raw file] or the Blame view. --- Si le formatage semble incorrect, essayez de visualiser le fichier Brut (Raw) ou le mode Blame.
+	
 
 Phase 1: The Foundations
 
@@ -54,7 +56,7 @@ Important Points --- Points importants:
 
 
 
-🛡️ 3. Goal: Install K3s without default networking and replace it with Cilium (eBPF) --- Objectif : Installer K3s sans réseau par défaut et le remplacer par Cilium (eBPF).
+🛡️ 3. Install K3s without default networking and replace it with Cilium (eBPF) --- Objectif : Installer K3s sans réseau par défaut et le remplacer par Cilium (eBPF).
 	 # a. Install K3s without Flannel/Kube-proxy --- Installer K3s sans Flannel ni Kube-proxy
   		sudo curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--flannel-backend=none --disable-network-policy --disable traefik" sh -
 	 # b. Export the cluster configuration --- Exporter la configuration du cluster
@@ -98,3 +100,19 @@ Source		Destination		Protocole	Action
 Pod Tracer	Google / Internet	HTTP (80)	DROPPED ❌
 Pod Tracer	VM Windows (129)	HTTP GET	ALLOWED ✅
 Pod Tracer	VM Windows (129)	HTTP POST	REJECTED (L7) 🛡️
+
+
+What has been accomplished with SSH between Kali and Debian
+Ansible operates without agents. To configure the Debian machine (the future K3s Master) from your Kali machine (the Control Plane), Ansible needs to be able to connect remotely.
+
+Automation: Without an SSH key, Ansible would ask for your password for every micro-task.
+The secure channel: SSH creates an encrypted tunnel to send the K3s and Cilium installation commands.
+---
+Ce qui a été ralisé SSH entre Kali et Debian
+Ansible fonctionne sans agent (agentless). Pour configurer la machine Debian (le futur Master K3s) depuis ta Kali (le Control Plane), Ansible doit pouvoir se connecter à distance.
+  L'automatisation : Sans clé SSH, Ansible te demanderait ton mot de passe à chaque micro-tâche.
+  Le canal sécurisé : SSH crée un tunnel chiffré pour envoyer les commandes d'installation de K3s et Cilium.
+  
+SCREENSHOTS --- CAPTURES D'ÉCRAN:
+
+
