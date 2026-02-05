@@ -24,7 +24,7 @@ ansible/
 │   └── shield-policy.yaml
 └── inventory.ini         # Target machines inventory
 ```
-🧰 Requirements — Prérequis
+## 🧰 Requirements — Prérequis
 
 Kali, Debian and Windows VMs (NAT / Internal Network)
 
@@ -34,7 +34,7 @@ Note
 Ansible is used to automate node configuration.
 Ansible permet d’automatiser la configuration des nœuds.
 
-📋 1. Ansible Setup — Installation d’Ansible
+### 📋 1. Ansible Setup — Installation d’Ansible
 
 Goal / Objectif
 Install the orchestration tool on the control machine (Kali).
@@ -150,16 +150,6 @@ Selective HTTP method filtering prevents data exfiltration.
 
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" /> ```
 
-```
-xxxx
-```
-```
-xxxx
-```
-
-```
-xxxx
-```
 
 
 
