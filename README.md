@@ -182,6 +182,7 @@ This phase is executed in a **hybrid virtualized laboratory** designed to simula
 
 > 📌 **VMware Workstation / ESXi Topology**  
 > *(Screenshots will be added below)*
+<img width="3839" height="2293" alt="Capture d’écran 2026-02-04 230913" src="https://github.com/user-attachments/assets/ee6b86a3-2c61-42f6-8853-a944fda849ec" />
 
 <!-- INSERT VMWARE TOPOLOGY SCREENSHOTS HERE -->
 <!-- Example:
@@ -203,6 +204,8 @@ To preserve Phase I stability while enabling advanced experimentation, **Phase I
 - Introduce additional nodes and attack surfaces
 - Experiment with automation and IDS/IPS logic
 - Avoid regression on the foundational security baseline
+
+<img width="1058" height="638" alt="creation of a new complexified branche named v2-active-defense-and-threat-containment" src="https://github.com/user-attachments/assets/0a2f31d6-c882-4dae-add5-187495f358a5" />
 
 <!-- INSERT GIT COMMAND SCREENSHOT HERE -->
 <!-- Example:
