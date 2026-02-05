@@ -43,7 +43,7 @@ Installer l’outil d’orchestration sur la machine de contrôle (Kali).
 sudo apt update && sudo apt install ansible -y
 ansible --version
 ```
-🏗️ 2. VM Provisioning — Création des machines virtuelles
+### 🏗️ 2. VM Provisioning — Création des machines virtuelles
 
 Goal / Objectif
 Deploy nodes for the security lab.
@@ -52,13 +52,13 @@ Deploy nodes for the security lab.
 | Control-Plane | Debian / Kali   | K3s Master & Cilium             | 4GB+ |
 | Target-Win    | Windows 10 / 11 | Attack Target / Cible d’attaque | 4GB  |
 
-⚠️ Important Notes
+### ⚠️ Important Notes
 
 All VMs must be on the same NAT / Internal network
 
 K3s + Cilium require at least 4GB RAM to compile eBPF programs
 
-🛡️ 3. K3s + Cilium (eBPF Firewall)
+### 🛡️ 3. K3s + Cilium (eBPF Firewall)
 
 Goal / Objectif
 Install K3s without default networking and replace it with Cilium (eBPF).
@@ -96,11 +96,13 @@ k3s kubectl run tracer \
   -- sh -c "while true; do curl -sL google.com > /dev/null; sleep 2; done"
 ```
 
+
 Step 2 — Apply the Security Policy
 ```
 k3s kubectl apply -f shield-policy.yaml
 
 ```
+
 
 👀 Visual Verification — Vérification visuelle
 
@@ -110,8 +112,9 @@ cilium hubble ui
 
 ```
 
-🏁 Phase I Summary — Récapitulatif
-✅ Achievements
+
+## 🏁 Phase I Summary — Récapitulatif
+### ✅ Achievements
 
 Infrastructure
 Functional K3s cluster with Cilium
@@ -128,28 +131,30 @@ Zero-Trust perimeter enforced (L3 / L4 / L7)
 | Pod Tracer | Windows VM        | HTTP GET  | ALLOWED ✅    |
 | Pod Tracer | Windows VM        | HTTP POST | REJECTED 🛡️ |
 
-📸 Screenshots — Captures d’écran
+## 📸 Screenshots — Captures d’écran
 🔓 Before — Default Kubernetes Behavior
 
-Traffic flows freely without restrictions.
+### Traffic flows freely without restrictions.
 
 <img src="https://github.com/user-attachments/assets/19b1428e-5f39-4f69-9275-6beebf011506" />
-🔒 After — Zero-Trust eBPF Shield Enabled
+
+
+###🔒 After — Zero-Trust eBPF Shield Enabled
 
 Unauthorized egress traffic is blocked.
 
 <img src="https://github.com/user-attachments/assets/a354abd1-cf00-4424-bd52-59fe0560d2bc" />
-🔍 Layer 7 (L7) Inspection — HTTP Filtering
+
+
+### 🔍 Layer 7 (L7) Inspection — HTTP Filtering
 
 GET requests allowed, POST requests blocked (eBPF proxy).
 
 <img src="https://github.com/user-attachments/assets/8c0b8c4e-7963-4085-9fdb-172d39d1f0ff" />
-🧠 Advanced L7 Enforcement
+
+
+### 🧠 Advanced L7 Enforcement
 
 Selective HTTP method filtering prevents data exfiltration.
 
 <img src="https://github.com/user-attachments/assets/05d433a2-06ca-4bad-a697-3ff814dc857d" /> ```
-
-
-
-
