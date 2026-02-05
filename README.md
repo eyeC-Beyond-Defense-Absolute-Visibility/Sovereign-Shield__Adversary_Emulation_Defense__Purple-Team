@@ -1,4 +1,11 @@
 # 🛡️ Sovereign Shield
+![VMware](https://img.shields.io/badge/VMware-Virtualization-607078?logo=vmware&logoColor=white)
+![VMware Lab](https://img.shields.io/badge/VMware-Lab%20Environment-4f8cc9?logo=vmware&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware-Secure%20Virtual%20Lab-232f3e?logo=vmware&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware-Secure%20Virtual%20Lab-232f3e?logo=vmware&logoColor=white)
+![VMware Workstation](https://img.shields.io/badge/VMware-Workstation%20Pro-607078?logo=vmware&logoColor=white)
+![VMware ESXi](https://img.shields.io/badge/VMware-ESXi-607078?logo=vmware&logoColor=white) 
+
 ![K3s](https://img.shields.io/badge/Kubernetes-K3s-326ce5?logo=kubernetes&logoColor=white)
 ![Cilium](https://img.shields.io/badge/Cilium-eBPF-ffcc00?logo=cilium&logoColor=black)
 ![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux&logoColor=white)
