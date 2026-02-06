@@ -34,12 +34,12 @@ ansible/
 ```
 ## 🧰 Requirements — Prérequis
 
-Kali, Debian and Windows VMs (NAT / Internal Network)
+- Kali, Debian and Windows VMs (NAT / Internal Network)
+- Ansible
 
-Ansible
-
-Note
+**Note**
 Ansible is used to automate node configuration.
+--
 Ansible permet d’automatiser la configuration des nœuds.
 
 ## 🖥️ Lab Environment Overview (VMware)
@@ -54,9 +54,9 @@ Ansible permet d’automatiser la configuration des nœuds.
 
 ### 📋 1. Ansible Setup — Installation d’Ansible
 
-Goal / Objectif
-Install the orchestration tool on the control machine (Kali).
-Installer l’outil d’orchestration sur la machine de contrôle (Kali).
+Goal / Objectif:
+- Install the orchestration tool on the control machine (Kali).
+- Installer l’outil d’orchestration sur la machine de contrôle (Kali).
 
 
 
@@ -67,25 +67,22 @@ ansible --version
 
 ### 🏗️ 2. VM Provisioning — Création des machines virtuelles
 
-Goal / Objectif
-Deploy nodes for the security lab.
+Goal / Objectif:
+- Deploy nodes for the security lab.
 | Machine       | OS              | Role                            | RAM  |
 | ------------- | --------------- | ------------------------------- | ---- |
 | Control-Plane | Debian / Kali   | K3s Master & Cilium             | 4GB+ |
 | Target-Win    | Windows 10 / 11 | Attack Target / Cible d’attaque | 4GB  |
 
-### ⚠️ Important Notes
-
-All VMs must be on the same NAT / Internal network
-
-K3s + Cilium require at least 4GB RAM to compile eBPF programs
+### ⚠️ Important Notes --- Notes importantes:
+- VMs must be on the same NAT / Internal network
+- K3s + Cilium require at least 4GB RAM to compile eBPF programs
 
 ### 🛡️ 3. K3s + Cilium (eBPF Firewall)
 
-Goal / Objectif
-Install K3s without default networking and replace it with Cilium (eBPF).
-
-Install K3s (No Flannel / No kube-proxy)
+Goal / Objectif:
+- Install K3s without default networking and replace it with Cilium (eBPF).
+- Install K3s (No Flannel / No kube-proxy)
 ```
 curl -sfL https://get.k3s.io | \
 INSTALL_K3S_EXEC="--flannel-backend=none --disable-network-policy --disable traefik" \
@@ -107,7 +104,7 @@ cilium hubble enable --ui
 ```
 ### 🧪 4. Testing the Shield — Tests du bouclier
 
-Goal / Objectif
+Goal / Objectif:
 Verify that the security policy blocks unauthorized traffic.
 
 #### Step 1 — Create a Test Pod
