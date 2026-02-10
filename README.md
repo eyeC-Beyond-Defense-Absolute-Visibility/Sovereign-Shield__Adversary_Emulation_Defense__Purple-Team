@@ -563,9 +563,9 @@ Sovereign-Shield/
 ## 📸 Documentation & description (des_CRx(ip/'een')_tion)
 ### Documentation
 **🧪 Key Commands — Version 1.0 (Complexyfy Not Crazyfy)
-... In prgress
+  ... In prgress
 
 ### Description
-... In prgress
+  ... In prgress
 
 
