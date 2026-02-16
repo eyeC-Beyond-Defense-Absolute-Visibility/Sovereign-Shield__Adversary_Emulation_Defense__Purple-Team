@@ -42,6 +42,53 @@ Just a **solid security core**.
 
 ## 🧱 Genesis Lab Architecture
 
+```mermaid
+
+graph TD
+    %% Traffic Sources
+    Source[Activity Source: Web/User/Kali] --> Kernel[Linux Kernel]
+    
+    %% eBPF Layer
+    Kernel --> Hooks{eBPF Hooks}
+    
+    subgraph Engine [Cilium Reasoning Engine]
+        direction TB
+        L3L4[L3/L4 Filter: IP/Port]
+        L7[L7 Filter: HTTP Inspection]
+        
+        L3L4 --> L7
+    end
+    
+    Hooks --> Engine
+
+    %% Decision Logic
+    Engine --> Check{Match Policy?}
+
+    %% Path: Allowed
+    Check -->|GET /index.html| Normal[Status: Normal]
+    Normal --> Pass[Decision: ALLOW]
+
+    %% Path: Suspicious
+    Check -->|POST /admin| Suspicious[Status: Suspicious]
+    Suspicious --> Alert[Decision: ALERT / DROP]
+
+    %% Sovereign Shield Action
+    subgraph Defense [Sovereign Shield: ENFORCE]
+        Alert --> Hubble[Hubble: Log Flow]
+        Alert --> Ansible[Ansible: Isolate Node]
+    end
+
+    %% Observability Link
+    Pass -.->|Telemetry| Hubble
+
+    %% Styling
+    style Defense fill:#2b0000,stroke:#ff0000,color:#fff
+    style Engine fill:#1a1a1a,stroke:#326ce5,color:#fff
+    style Alert fill:#700,color:#fff
+    style Pass fill:#050,color:#fff
+
+```
+
 ```
 ansible/
 ├── scripts/              # Ansible playbooks & bash scripts
