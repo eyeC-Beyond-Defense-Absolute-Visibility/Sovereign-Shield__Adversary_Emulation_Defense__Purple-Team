@@ -13,18 +13,32 @@ Cette phase décrit la mise en place de l’**infrastructure de base** et d’un
 
 ---
 
-## 📁 Project Structure — Structure du projet
+## 📁 Project Structure
 
 ```
-ansible/
-├── scripts/              # Ansible playbooks & bash scripts
-│   ├── deploy_shield.yml
-│   └── enable_hubble.yml
-├── policies/             # Cilium security policies (.yaml)
-│   └── shield-policy.yaml
-└── inventory.ini         # Target machines inventory
+.
+  ├── ansible/            # 🤖 Automation & IaC
+│   ├── policies/       # Cilium L3/L4/L7 security rules
+│   │   └── shield-policy.yaml
+│   └── scripts/        # Deployment & Configuration playbooks
+│       ├── deploy_shield.yml
+│       └── enable_hubble.yml
+├── .gitignore          # 🛡️ Protection against temp files (~$ / .tmp)
+├── README.md
+└── inventory.example.ini
 ```
-## 🧰 Requirements — Prérequis
+***Flow:***
+```mermaid
+graph TD
+    A[Traffic Ingress] -->|Filtering| B(eBPF / Cilium Shield)
+    B -->|Flow Telemetry| C{Sentinel-Trace}
+    C -->|Threat Detection| D[C++ Orchestration Engine]
+    D -->|Active Response| B
+    D -->|Automation| E[Ansible Playbooks]
+    E -->|Isolate/Patch| F[Target Nodes]
+```
+
+## 🧰 Requirements
 
 Kali, Debian and Windows VMs (NAT / Internal Network)
 
@@ -34,7 +48,7 @@ Note
 Ansible is used to automate node configuration.
 Ansible permet d’automatiser la configuration des nœuds.
 
-### 📋 1. Ansible Setup — Installation d’Ansible
+### 📋 1. Ansible Setup
 
 Goal / Objectif
 Install the orchestration tool on the control machine (Kali).
@@ -43,7 +57,7 @@ Installer l’outil d’orchestration sur la machine de contrôle (Kali).
 sudo apt update && sudo apt install ansible -y
 ansible --version
 ```
-### 🏗️ 2. VM Provisioning — Création des machines virtuelles
+### 🏗️ 2. VM Provisioning
 
 Goal / Objectif
 Deploy nodes for the security lab.
@@ -83,7 +97,7 @@ cilium install \
 
 cilium hubble enable --ui
 ```
-### 🧪 4. Testing the Shield — Tests du bouclier
+### 🧪 4. Testing the Shield
 
 Goal / Objectif
 Verify that the security policy blocks unauthorized traffic.
@@ -103,7 +117,7 @@ k3s kubectl apply -f shield-policy.yaml
 ```
 
 
-#### 👀 Visual Verification — Vérification visuelle
+#### 👀 Visual Verification
 
 Launch Hubble UI:
 ```
@@ -112,7 +126,7 @@ cilium hubble ui
 ```
 
 
-## 🏁 Phase I Summary — Récapitulatif
+## 🏁 Phase I Summary
 ### ✅ Achievements
 
 Infrastructure
