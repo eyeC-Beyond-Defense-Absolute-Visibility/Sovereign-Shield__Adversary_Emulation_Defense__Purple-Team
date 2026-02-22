@@ -157,7 +157,7 @@ Selective HTTP method filtering prevents data exfiltration.
 
 ## 🔜 What comes next?
 
-### Version 1.1 — **Complexify · Not Crazyfy**
+### Version 2.0 — **Complexify · Not Crazyfy**
 
 The next iteration introduces:
 - multi-node environments
