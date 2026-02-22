@@ -1,4 +1,3 @@
-# 🛡️ Sovereign Shield
 ![K3s](https://img.shields.io/badge/Kubernetes-K3s-326ce5?logo=kubernetes&logoColor=white)
 ![Cilium](https://img.shields.io/badge/Cilium-eBPF-ffcc00?logo=cilium&logoColor=black)
 ![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux&logoColor=white)
