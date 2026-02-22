@@ -103,3 +103,10 @@ chmod +x setup.sh
 **eyeC**(ybersecurity) ~ (... I See) is a personal lab initiative by O'djuma Badolo. It focuses on making the invisible visible through eBPF observability and building robust, automated foundations for modern DevSecOps.
 
 > *"Build the foundation. Then earn the complexity."*
+
+
+## 👤 Author
+
+**O'djuma Badolo**  
+Web Developer | Cybersecurity graduate | DevSecOps Enthusiast  
+> *"Building secure systems by thinking like the storm."*
