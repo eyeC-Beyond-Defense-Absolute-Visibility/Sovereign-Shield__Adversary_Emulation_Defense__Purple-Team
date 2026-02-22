@@ -1,0 +1,57 @@
+---
+- name: Sovereign Shield Installation (Full Reset & Install)
+  hosts: k8s_nodes
+  become: yes
+  tasks:
+    - name: 1. Force Official Debian Repositories (Fix CD-ROM issue)
+      copy:
+        dest: /etc/apt/sources.list
+        content: |
+          deb http://deb.debian.org/debian/ bookworm main
+          deb-src http://deb.debian.org/debian/ bookworm main
+          deb http://security.debian.org/debian-security bookworm-security main
+          deb-src http://security.debian.org/debian-security bookworm-security main
+          deb http://deb.debian.org/debian/ bookworm-updates main
+          deb-src http://deb.debian.org/debian/ bookworm-updates main
+
+    - name: 2. Clean APT locks and update cache
+      shell: |
+        rm -f /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock*
+        dpkg --configure -a
+        apt-get update
+      ignore_errors: yes
+
+    - name: 3. Install missing tools (curl, tar, openssl)
+      apt:
+        name: [curl, tar, openssl, ca-certificates]
+        state: present
+        update_cache: yes
+
+    - name: 4. Install K3s (Flannel disabled)
+      shell: |
+        curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--flannel-backend=none --disable-network-policy' sh -
+      args:
+        creates: /usr/local/bin/k3s
+
+    - name: 5. Install Cilium CLI
+      shell: |
+        CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
+        curl -L --fail --remote-name-all https://github.com/cilium/cilium-cli/releases/download/${CILIUM_CLI_VERSION}/cilium-linux-amd64.tar.gz
+        tar xzvfC cilium-linux-amd64.tar.gz /usr/local/bin
+        rm -f cilium-linux-amd64.tar.gz
+      args:
+        creates: /usr/local/bin/cilium
+
+    - name: 6. Deploy Cilium
+      shell: |
+        cilium install --version v1.16.1 \
+          --set tunnel=disabled \
+          --set autoDirectNodeRoutes=true \
+          --set ipv4NativeRoutingCIDR=10.42.0.0/16 \
+          --set operator.replicas=1
+      environment:
+        KUBECONFIG: /etc/rancher/k3s/k3s.yaml
+      register: cilium_res
+      until: cilium_res.rc == 0
+      retries: 10
+      delay: 15

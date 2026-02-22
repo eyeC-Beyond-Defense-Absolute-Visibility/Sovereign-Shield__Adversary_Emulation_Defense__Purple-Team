@@ -1,0 +1,17 @@
+# Personal Documentation & Benchmarks
+Notes/
+CIS_CentOS_Linux_7_Benchmark_v2.2.0.pdf
+New.txt
+Phase 1.docx
+Phase 2.docx
+
+# Security (NEVER PUBLISH)
+# Even in a lab environment, exclusion demonstrates professional rigor
+ansible/ssh-keygen*
+ansible/kubeconfig.yaml
+*.key
+*.pem
+
+# Build & OS
+build/
+.DS_Store

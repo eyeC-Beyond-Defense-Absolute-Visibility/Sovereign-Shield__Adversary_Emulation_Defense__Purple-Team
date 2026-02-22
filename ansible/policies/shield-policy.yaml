@@ -1,0 +1,21 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "sovereign-shield-l7"
+spec:
+  endpointSelector:
+    matchLabels:
+      run: tracer
+  egress:
+  - toCIDR:
+    - "192.168.19.129/32" # Allow ONLY your Windows VM --- Autorise UNIQUEMENT ta VM Windows
+    toPorts:
+    - ports:
+      - port: "80"
+        protocol: TCP
+      rules:
+        http:
+        - method: "GET"
+          path: "/"
+  - toEntities:
+    - cluster # Allows internal communication (DNS) --- Autorise la communication interne (DNS)
