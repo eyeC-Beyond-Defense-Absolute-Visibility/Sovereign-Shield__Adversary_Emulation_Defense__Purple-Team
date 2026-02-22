@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 # 🛡️ Sovereign Shield
 ![K3s](https://img.shields.io/badge/Kubernetes-K3s-326ce5?logo=kubernetes&logoColor=white)
 ![Cilium](https://img.shields.io/badge/Cilium-eBPF-ffcc00?logo=cilium&logoColor=black)
 ![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux&logoColor=white)
 ![Security](https://img.shields.io/badge/Security-Zero--Trust-red)
 
-=======
->>>>>>> main
+---
+
 # 🛡️ Sovereign-Shield v2: Complexify Not Crazyfy
 
 **High-Performance Purple Team Orchestration & Multi-Node Defense**
@@ -112,19 +111,12 @@ chmod +x setup.sh
 
 ## 👁️ About eyeC
 
-<<<<<<< HEAD
 **eyeC**(ybersecurity) ~ (... I See) is a personal lab initiative by O'djuma Badolo. It focuses on making the invisible visible through eBPF observability and building robust, automated foundations for modern DevSecOps.
 
-> *"Build the foundation. Then earn the complexity."*
-
+---
 
 ## 👤 Author
 
 **O'djuma Badolo**  
 Web Developer | Cybersecurity graduate | DevSecOps Enthusiast  
-> *"Building secure systems by thinking like the storm."*
-=======
-**eyeC** (Cybersecurity / I See) is a personal lab initiative by O'djuma Badolo. It focuses on making the invisible visible through eBPF observability and building robust, automated foundations for modern DevSecOps.
-
 > *"Build the foundation. Then earn the complexity."*
->>>>>>> main
