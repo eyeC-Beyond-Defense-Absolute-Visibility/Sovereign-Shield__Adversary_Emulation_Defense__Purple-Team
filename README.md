@@ -4,6 +4,8 @@
 ## *** Sovereign Shield is one of the eyeC Triplets***
 [🔗 Explore the project](https://github.com/eyeC-DevSecOps-project)
 
+---
+
 ## 🔰 Phase I — Foundations
 
 This phase describes the setup of the **core infrastructure** and an **eBPF-based firewall** using **K3s + Cilium**.  
