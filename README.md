@@ -10,7 +10,6 @@
 
 This phase describes the setup of the **core infrastructure** and an **eBPF-based firewall** using **K3s + Cilium**.  
 
----
 
 ## 📁 Project Structure
 
