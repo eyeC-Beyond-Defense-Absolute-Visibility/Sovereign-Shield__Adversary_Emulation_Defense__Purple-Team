@@ -1,6 +1,10 @@
 # 🛡️ Sovereign Shield: Genesis
 
 ---
+Sovereign Shield is one of the eyeC Triplets
+
+🔗 [🔗 Explore the project](https://github.com/eyeC-DevSecOps-project)
+---
 
 ## 🔰 Phase I — Foundations
 
