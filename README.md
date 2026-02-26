@@ -1,7 +1,8 @@
-![K3s](https://img.shields.io/badge/Kubernetes-K3s-326ce5?logo=kubernetes&logoColor=white)
-![Cilium](https://img.shields.io/badge/Cilium-eBPF-ffcc00?logo=cilium&logoColor=black)
-![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux&logoColor=white)
-![Security](https://img.shields.io/badge/Security-Zero--Trust-red)
+![C++](https://img.shields.io/badge/C++-Orchestration-00599C?logo=c%2B%2B&logoColor=white) ![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux&logoColor=white) ![Cilium](https://img.shields.io/badge/Cilium-eBPF-ffcc00?logo=cilium&logoColor=black) ![K3s](https://img.shields.io/badge/Kubernetes-K3s-326ce5?logo=kubernetes&logoColor=white) ![Hubble](https://img.shields.io/badge/Hubble-L7_Visibility-607078?logo=cilium&logoColor=white)
+
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE_ATT%26CK-Adversary_Emulation-ff6600) ![NIST](https://img.shields.io/badge/NIST-SP_800--61-blue) ![Security](https://img.shields.io/badge/Security-Zero--Trust-red)
+
+![AlmaLinux](https://img.shields.io/badge/AlmaLinux-D42028?logo=almalinux&logoColor=white) ![Windows Server](https://img.shields.io/badge/Win_Server-2019/11-0078D6?logo=windows&logoColor=white) ![Debian](https://img.shields.io/badge/Debian-12-A81D33?logo=debian&logoColor=white) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)
 
 ---
 
